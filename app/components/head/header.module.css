@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    color: black;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.listContainer {
+    display: flex;
+    gap: 10px;
+    list-style: none;   
+}
+
