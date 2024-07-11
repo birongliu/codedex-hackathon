@@ -1,7 +1,10 @@
-'use client'
+"use client"
 import Image from "next/image"
 import styles from "./header.module.css"
+import { useState } from "react"
+const menuItem = ["About", "Press", "Menu", "Feedback"]
 export default function Header() {
+  const [active, setActive] = useState('');
   return (
     <nav>
         <div className={styles.container}>
@@ -13,10 +16,9 @@ export default function Header() {
               priority
             />
             <ul className={styles.listContainer}>
-                <li>About</li>
-                <li>Press</li>
-                <li>Menu</li>
-                <li>Feedback</li>
+                {menuItem.map(key => {
+                  return <li onClick={() => setActive(key)} className={active === key ? styles.navActive : ""} key={key}>{key}</li>
+                })}
             </ul>
         </div>
     </nav>
