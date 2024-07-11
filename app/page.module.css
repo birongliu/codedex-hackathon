@@ -1,8 +1,10 @@
 .main {
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   padding: 6rem;
   min-height: 100vh;
-  background-color: white;
 }
 
 .description {
@@ -103,12 +105,8 @@
   transform: translateZ(0);
 }
 
-.turtleLogo {
-  width: 250px;
-  height: 200px;
-  position: absolute; /* Added for absolute positioning */
-  left: -20px; /* Negative value to move it further right */
-  transform: translateY(-110px);
+.logo {
+  position: relative;
 }
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
