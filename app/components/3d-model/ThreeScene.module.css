@@ -5,11 +5,12 @@
   }
   
 .canvas {
-  top: -250px;
+  top: 0;
   right: 150px;
   z-index: 1;
   width: inherit;
-  height: 298px;
+  height: 498px;
+  transform: translateY(50px);
 }
 
   

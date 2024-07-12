@@ -66,3 +66,11 @@
     width: auto;
   }
 }
+
+.title {
+  font-size: 3rem; /* Adjust the size as needed */
+  color: #2ecc71; /* Green color */
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}

@@ -16,7 +16,7 @@ const ThreeScene = () => {
 
     // Camera
     const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
-    camera.position.z = 5;
+    camera.position.z = 3;
 
     // Renderer
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
@@ -38,7 +38,7 @@ const ThreeScene = () => {
     const initialState = {
         position: new THREE.Vector3(0, 0, 0),
         rotation: new THREE.Euler(0.3, Math.PI / 4, 0), // Adjust as needed
-        scale: new THREE.Vector3(1.5, 1.5, 1.5), // Adjust as needed
+        scale: new THREE.Vector3(2, 2, 2), // Adjust as needed
     };
 
     // Load GLB model
