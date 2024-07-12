@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "./header.module.css";
 import { useState } from "react";
 import Link from "next/link";
-const menuItem = ["about", "press", "menu", "feedback"];
+const menuItem = ["About", "Press", "Menu", "Feedback"];
 export default function Header() {
   const [active, setActive] = useState("");
   const [activeMenu, setActiveMenu] = useState(false);
@@ -26,7 +26,7 @@ export default function Header() {
                 className={active === key ? styles.navActive : ""}
                 key={key}
               >
-                <Link href={`/${key}`}>{key}</Link>
+                <Link href={`/${key.toLowerCase()}`}>{key}</Link>
               </li>
             );
           })}
