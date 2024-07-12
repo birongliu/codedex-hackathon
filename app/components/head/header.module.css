@@ -4,7 +4,8 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
-    background-color: #d9d5c8;
+    min-width: 100dvw;
+    background-color: #dfdcd2;
 }
 
 .listContainer {
@@ -12,23 +13,46 @@
     display: flex;
     gap: 10px;
     list-style: none;   
-
+    padding: 0 30px;
 }
 
 
-.listContainer > li:hover, .navActive {
+.listContainer > li:hover {
     cursor: pointer;
-    border: 2px solid;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    font-weight: bold;
-    border-width: 1;
 }
 
+.navActive {
+    font-weight: bold;
+}
+
+.controller, .mobileMenu, .mobileMenuHidden {
+    display: none;
+}
 
 @media screen and (max-width: 768px) {
     .listContainer {
         display: none;
+    }
+
+    .controller:hover {
+        cursor: pointer;
+    }
+
+    .controller {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 30px;
+    }
+
+
+    .mobileMenu {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 25dvh;
+        color: black;
+        list-style: none;
     }
 }
