@@ -12,7 +12,7 @@ export default function Home() {
         <div className={styles.action}>
         <button className={styles.actionButton}>Ready? Reserve for Spot</button>
         </div>
-        <div id="threejs-container" style={{width: '150%', height: '100vh'}}>
+        <div id="threejs-container" style={{width: '150%', height: '200vh'}}>
         <ThreeScene />
         </div>
       </div>

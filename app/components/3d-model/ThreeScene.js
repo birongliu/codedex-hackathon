@@ -31,7 +31,7 @@ const ThreeScene = () => {
     controls.dampingFactor = 0.05;
 
     // Light
-    const light = new THREE.AmbientLight(0xffffff); // soft white light
+    const light = new THREE.AmbientLight(0xffffff);
     scene.add(light);
 
     // Initial model state
@@ -54,6 +54,15 @@ const ThreeScene = () => {
         model.scale.copy(initialState.scale);
 
         scene.add(model);
+
+        // Assuming 'model' is your 3D model object
+        function adjustModelScale() {
+            const scale = window.innerWidth < 1666 ? 0.5 : 1; // Smaller scale for smaller screens
+            model.scale.set(scale, scale, scale);
+        }
+  
+        window.addEventListener('resize', adjustModelScale);
+        adjustModelScale();
       },
       undefined,
       (error) => {
@@ -64,9 +73,7 @@ const ThreeScene = () => {
     // Animation
     const animate = function () {
       requestAnimationFrame(animate);
-
-      controls.update(); // Only required if controls.enableDamping = true, or if controls.autoRotate = true
-
+      controls.update();
       renderer.render(scene, camera);
     };
 
@@ -78,6 +85,7 @@ const ThreeScene = () => {
       camera.updateProjectionMatrix();
       renderer.setSize(container.clientWidth, container.clientHeight);
     });
+
 
     // Cleanup on unmount
     return () => {
