@@ -9,13 +9,14 @@ import { seededRandom } from 'three/src/math/MathUtils';
 
 export default function NavItem({ className }) {
   const path = usePathname();
+  console.log(path)
   return (
     <ul key={seededRandom()} className={className}>
     {menuItem.map(({name, url}) => {
       return (
         <li
           className={path === url ? styles.navActive : ""}
-          key={name}
+          key={`${url}-${name}`}
         >
           <Link key={name} href={url}>{name}</Link>
         </li>
