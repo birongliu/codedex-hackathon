@@ -1,4 +1,5 @@
 import styles from "./page.module.css";
+import ThreeScene from "../app/components/ThreeScene";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <div className={styles.action}>
         <button className={styles.actionButton}>Ready? Reserve for Spot</button>
         </div>
+        <ThreeScene />
       </div>
     </main>
   );
