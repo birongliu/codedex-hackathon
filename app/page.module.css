@@ -14,7 +14,11 @@
 }
 .threejs {
   height: 559px;
+  width: 50dvw;
+  display: flex;
+  justify-content: center;
 }
+
 .actionButton {
   cursor: pointer;
   transition: all;
@@ -57,7 +61,8 @@
 
   .main {
     flex-direction: column;
-
   }
-
+  .threejs {
+    width: auto;
+  }
 }
