@@ -5,7 +5,7 @@
     justify-content: space-between;
     padding: 0 20px;
     min-width: 100dvw;
-    background-color: #dfdcd2;
+    background-color: #a8d59c;
 }
 
 .listContainer {
@@ -45,6 +45,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        background-color: #96bb8c;
         min-height: 25dvh;
         color: black;
         list-style: none;

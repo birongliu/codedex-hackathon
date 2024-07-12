@@ -2,34 +2,22 @@
 import Image from "next/image";
 import styles from "./header.module.css";
 import { useState } from "react";
-const menuItem = ["About", "Events", "Menu", "Feedback"];
+import NavItem from "./NavItem";
 export default function Header() {
-  const [active, setActive] = useState("");
   const [activeMenu, setActiveMenu] = useState(false);
-
   return (
     <nav>
       <div className={styles.container}>
-        <Image
-          src="/sipnplay.png"
-          alt="sinplay Logo"
-          width={100}
-          height={100}
-          priority
-        />
-        <ul className={styles.listContainer}>
-          {menuItem.map((key) => {
-            return (
-              <li
-                onClick={() => setActive(key)}
-                className={active === key ? styles.navActive : ""}
-                key={key}
-              >
-                <a href={`${key}`}>{key}</a>
-              </li>
-            );
-          })}
-        </ul>
+        <a href="/">
+          <Image
+            src="/sipnplay.png"
+            alt="sinplay Logo"
+            width={100}
+            height={100}
+            priority
+          />
+        </a>
+        <NavItem className={styles.listContainer} />
         <div className={styles.controller}>
           {!activeMenu ? (
             <Image
@@ -52,19 +40,7 @@ export default function Header() {
           )}
         </div>
       </div>
-      <div className={activeMenu ? styles.mobileMenu : styles.mobileMenuHidden}>
-        {menuItem.map((key) => {
-          return (
-            <li
-              onClick={() => setActive(key)}
-              className={active === key ? styles.navActive :""}
-              key={key}
-            >
-              <a href={`#${key}`}>{key}</a>
-            </li>
-          );
-        })}
-      </div>
+      <NavItem className={activeMenu ? styles.mobileMenu : styles.mobileMenuHidden} />
     </nav>
   );
 }

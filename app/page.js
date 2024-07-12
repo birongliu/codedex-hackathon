@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.container}>
-        <h1 className={styles.title}>Sip & Play</h1>
+        <h1 className={styles.title}>Sip & Play 🧋</h1>
         <p className={styles.description}>
           Welcome to Sip & Play, your ultimate destination for fun and relaxation! Enjoy classic eats, refreshing bubble tea, and a variety of beers served in a cozy, old-school, brick-lined café.
           <br className={styles.hidden} />
