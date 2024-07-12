@@ -3,74 +3,168 @@
     padding: 6rem;
     min-height: 100vh;
     color: black;
-    gap: 20px;
     background-color: wheat;
   }
   
-.container {
+  .container {
     margin: 30px 0;
     display: flex;
     flex-direction: column;
-}
-
-.title {
+    width: 20%;
+  }
+  
+  .title {
     font-size: 20px;
     font-weight: bold;
-}
-
-.calendar {
-    height: 50%;
-    width: 70%;
-}
-
-.actionButton {
+  }
+  
+  .events {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .eventCard {
+    background: #fff;
+    border-radius: 8px;
+    padding: 0.75rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .eventTitle {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .eventDetails {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.25rem;
+  }
+  
+  .eventDescription {
+    font-size: 0.85rem;
+    color: #777;
+  }
+  
+  .action {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .actionButton {
     cursor: pointer;
-    transition: all;
+    transition: all 0.3s;
     background-color: #3b82f6;
     color: white;
-    padding: 8px 24px;
-    border-radius: 0.5rem;
-    border-color: #4b86b4;
-    border-bottom: 4px solid #4b86b4;
-}
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
   
-.actionButton:hover {
-    filter: brightness(110%);
-    transform: translateY(-1px);
-    border-bottom: 6px solid #4b86b4;
-}
+  .actionButton:hover {
+    background-color: #2563eb;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
   
-.actionButton:active {
-    border-bottom: 2px solid #4b86b4;
-    filter: brightness(90%);
-    transform: translateY(2px);
-}
+  .actionButton:active {
+    transform: translateY(1px);
+  }
   
-.description {
-    font-size: 0.85rem;
-    text-wrap: wrap;
-    white-space: normal;
-    font-size: 16px;
-    font-family: var(--font-mono);
-    margin-bottom: 10px;
-}
+  .calendar {
+    flex-grow: 1;
+    margin-left: 2rem;
+    transform: translateX(-12px);
+  }
   
-@media screen and (max-width: 768px) {
+  .boardGamesSection {
+    padding: 2rem 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 2rem;
+    max-width: 300px;
+    transform: translateX(12px);
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #333;
+  }
+  
+  .gamesContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .gameCard {
+    background: linear-gradient(135deg, #f5a623, #f76b1c);
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    color: white;
+  }
+  
+  .gameCard:nth-child(2) {
+    background: linear-gradient(135deg, #42a5f5, #478ed1);
+  }
+  
+  .gameCard:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .gameImage {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 1rem;
+  }
+  
+  .gameTitle {
+    font-size: 1.8rem;
+    margin: 0.5rem 0;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .gameDescription {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    line-height: 1.4;
+  }
+  
+  @media screen and (max-width: 768px) {
     .container {
-      display: flex;
-      align-items: center;
+      width: 100%;
+      margin: 0;
+      padding: 0;
       text-align: center;
-      text-wrap: nowrap;
-}
+    }
   
     .main {
       flex-direction: column;
-  
+      padding: 2rem 1rem;
     }
   
-}
-
-
-
-
+    .calendar {
+      margin-left: 0;
+    }
+  
+    .boardGamesSection {
+      margin-top: 1rem;
+      max-width: 100%;
+    }
+  }
+  
   
