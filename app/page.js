@@ -12,10 +12,10 @@ export default function Home() {
         <div className={styles.action}>
         <button className={styles.actionButton}>Ready? Reserve for Spot</button>
         </div>
-        <div id="threejs-container" style={{width: '150%', height: '200vh'}}>
+      </div>
+      <div id="threejs-container" className={styles.threejs}>
         <ThreeScene />
         </div>
-      </div>
     </main>
   );
 }

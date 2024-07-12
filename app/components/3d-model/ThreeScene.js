@@ -52,13 +52,12 @@ const ThreeScene = () => {
         model.position.copy(initialState.position);
         model.rotation.copy(initialState.rotation);
         model.scale.copy(initialState.scale);
-
         scene.add(model);
         model.position.set(0, 0, 0);
 
         // Assuming 'model' is your 3D model object
         function adjustModelScale() {
-            const scale = window.innerWidth < 1666 ? 0.5 : 1; // Smaller scale for smaller screens
+            const scale = window.innerHeight <= 768 ? 1.5 : 1; // Smaller scale for smaller screens
             model.scale.set(scale, scale, scale);
         }
   
@@ -122,7 +121,7 @@ const ThreeScene = () => {
     };
   }, []);
 
-  return <div id="threejs-container" className={styles.container}></div>;
+  return <React.Fragment /> //<div id="threejs-container" className={styles.container}></div>;
 };
 
 export default ThreeScene;

@@ -12,7 +12,9 @@
   display: flex;
   flex-direction: column;
 }
-
+.threejs {
+  height: 559px;
+}
 .actionButton {
   cursor: pointer;
   transition: all;

@@ -1,57 +1,15 @@
-.body {
-    margin: 0;
-    overflow: hidden;
-  }
-  
-  #threejs-container {
+#threejs-container {
     position: relative;
-    width: 100%;
-    height: 100vh;
+    width: 50px;
+    height: 100px;
   }
   
-  .canvas {
-    position: absolute;
-    top: -250px;
-    right: 150px;
-    width: 30%; 
-    height: auto;
-    z-index: 1;
-  }
-
-  @media (max-width: 1666px) {
-    .canvas {
-      top: -40vh;
-      right: 2vw;
-      width: 70vw; /* Adjusted for demonstration */
-      height: 35vw; /* Adjust height proportionally */
-    }
-  }
-
-  @media (max-width: 1295px) {
-    .canvas {
-      top: -20vh;
-      right: 15vw;
-      width: 70vw; /* Adjusted for demonstration */
-      height: 35vw; /* Adjust height proportionally */
-    }
-
-  }
-@media (max-width: 768px) {
-  .canvas {
-    top: -20vh;
-    right: -6vw;
-    width: 60vw; /* Further reduce size for smaller devices */
-    height: 30vw; /* Adjust height proportionally */
-  }
+.canvas {
+  top: -250px;
+  right: 150px;
+  z-index: 1;
+  width: inherit;
+  height: 298px;
 }
-
-@media (max-width: 590px) {
-    .canvas {
-      top: -20vh;
-      right: 10vw;
-      width: 60vw; /* Further reduce size for smaller devices */
-      height: 30vw; /* Adjust height proportionally */
-    }
-  }
 
   
