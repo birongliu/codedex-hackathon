@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import '@zach.codes/react-calendar/dist/calendar-tailwind.css';
-import "./calendar.module.css";
+// import "./calendar.module.css";
 import { format, subHours, startOfMonth } from 'date-fns';
 import {
   MonthlyBody,
@@ -24,9 +24,9 @@ const MyMonthlyCalendar = () => {
       <MonthlyNav />
       <MonthlyBody
         events={[
-          { title: 'Call John', date: subHours(new Date(), 2) },
-          { title: 'Call John', date: subHours(new Date(), 1) },
-          { title: 'Meeting with Bob', date: new Date() },
+          { title: 'Bingo', date: subHours(new Date(), 2) },
+          // { title: 'Monopoly', date: subHours(new Date(), 1) },
+          { title: 'Trivia', date: new Date() },
         ]}
       >
         <MonthlyDay

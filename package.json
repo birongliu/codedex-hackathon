@@ -11,9 +11,9 @@
   "dependencies": {
     "@zach.codes/react-calendar": "^0.3.3",
     "date-fns": "^3.6.0",
+    "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.5", 
     "three": "^0.166.1"
   }
 }

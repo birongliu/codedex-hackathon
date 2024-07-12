@@ -1,5 +1,6 @@
 import styles from "./page.module.css";
 import ThreeScene from "./components/3d-model/ThreeScene";
+import MyMonthlyCalendar from "./components/calendar/MyMonthlyCalendar";
 
 export default function Home() {
   return (
