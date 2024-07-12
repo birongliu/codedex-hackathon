@@ -54,6 +54,7 @@ const ThreeScene = () => {
         model.scale.copy(initialState.scale);
 
         scene.add(model);
+        model.position.set(0, 0, 0);
 
         // Assuming 'model' is your 3D model object
         function adjustModelScale() {
@@ -86,6 +87,34 @@ const ThreeScene = () => {
       renderer.setSize(container.clientWidth, container.clientHeight);
     });
 
+    // Scroll handling
+    let scrollTimeout;
+    window.addEventListener('scroll', () => {
+      controls.enabled = false;
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        controls.enabled = true;
+      }, 150);
+    });
+
+    // Touch handling
+    let isTouchMove = false;
+
+    window.addEventListener('touchstart', () => {
+      isTouchMove = false;
+    });
+
+    window.addEventListener('touchmove', () => {
+      isTouchMove = true;
+    });
+
+    window.addEventListener('touchend', () => {
+      if (isTouchMove) {
+        controls.enabled = false;
+      } else {
+        controls.enabled = true;
+      }
+    });
 
     // Cleanup on unmount
     return () => {
@@ -93,7 +122,7 @@ const ThreeScene = () => {
     };
   }, []);
 
-  return null;
+  return <div id="threejs-container" className={styles.container}></div>;
 };
 
 export default ThreeScene;
