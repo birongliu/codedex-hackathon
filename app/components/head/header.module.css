@@ -45,6 +45,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        background-color: #96bb8c;
         min-height: 25dvh;
         color: black;
         list-style: none;
