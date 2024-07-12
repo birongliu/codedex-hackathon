@@ -3,7 +3,7 @@ export const menuItem = [{
 },
 {
     name: "About",
-    url: "/about" 
+    url: "/About" 
 },
 {
     name: "Events", 
@@ -11,9 +11,5 @@ export const menuItem = [{
 },
 {
     name: "Menu",
-    url: "/menu"
-},
-{
-    name: "Feedback",
-    url: "/feedback"
+    url: "/Menu"
 }];

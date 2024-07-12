@@ -1,5 +1,5 @@
 .main {
-  display: flex;
+  display: relative;
   padding: 6rem;
   min-height: 100vh;
   color: black;
@@ -10,13 +10,15 @@
 .container {
   margin: 30px 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 .threejs {
   height: 559px;
   width: 50dvw;
   display: flex;
   justify-content: center;
+  margin-top: 10px;
+
 }
 
 .actionButton {
@@ -62,12 +64,23 @@
     align-items: center;
     text-align: center;
     text-wrap: nowrap;
+    flex-direction: column;
+  
+  }
+
+  .section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .main {
     flex-direction: column;
   }
   .threejs {
-    width: auto;
+    height: 559px;
+    width: 50dvw;
+    margin-top: 10px;
   }
 }
