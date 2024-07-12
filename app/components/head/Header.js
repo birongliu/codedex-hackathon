@@ -10,6 +10,7 @@ export default function Header() {
   return (
     <nav>
       <div className={styles.container}>
+      <a href="/">
         <Image
           src="/sipnplay.png"
           alt="sinplay Logo"
@@ -17,6 +18,7 @@ export default function Header() {
           height={100}
           priority
         />
+      </a>
         <ul className={styles.listContainer}>
           {menuItem.map((key) => {
             return (
