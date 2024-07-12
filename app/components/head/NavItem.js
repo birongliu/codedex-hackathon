@@ -4,12 +4,13 @@ import styles from "./header.module.css"
 import Link from 'next/link';
 import { menuItem } from '@/app/constants/navItemLinks';
 import { usePathname } from 'next/navigation';
+import { seededRandom } from 'three/src/math/MathUtils';
 
 
 export default function NavItem({ className }) {
   const path = usePathname();
   return (
-    <ul className={className}>
+    <ul key={seededRandom()} className={className}>
     {menuItem.map(({name, url}) => {
       return (
         <li
