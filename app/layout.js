@@ -16,7 +16,8 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
       </body>
-      <body className={inter.className}>{children}</body>
+      {/* This was making the 3d model render twice */}
+      {/* <body className={inter.className}>{children}</body> */}
     </html>
   );
 }

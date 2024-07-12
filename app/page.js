@@ -1,5 +1,5 @@
 import styles from "./page.module.css";
-import ThreeScene from "../app/components/ThreeScene";
+import ThreeScene from "./components/3d-model/ThreeScene";
 
 export default function Home() {
   return (
@@ -12,7 +12,9 @@ export default function Home() {
         <div className={styles.action}>
         <button className={styles.actionButton}>Ready? Reserve for Spot</button>
         </div>
+        <div id="threejs-container" style={{width: '150%', height: '100vh'}}>
         <ThreeScene />
+        </div>
       </div>
     </main>
   );
