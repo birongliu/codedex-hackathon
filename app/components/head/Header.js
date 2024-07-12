@@ -2,7 +2,8 @@
 import Image from "next/image";
 import styles from "./header.module.css";
 import { useState } from "react";
-const menuItem = ["About", "Press", "Menu", "Feedback"];
+import Link from "next/link";
+const menuItem = ["about", "press", "menu", "feedback"];
 export default function Header() {
   const [active, setActive] = useState("");
   const [activeMenu, setActiveMenu] = useState(false);
@@ -25,7 +26,7 @@ export default function Header() {
                 className={active === key ? styles.navActive : ""}
                 key={key}
               >
-                <a href={`#${key}`}>{key}</a>
+                <Link href={`/${key}`}>{key}</Link>
               </li>
             );
           })}
@@ -57,10 +58,10 @@ export default function Header() {
           return (
             <li
               onClick={() => setActive(key)}
-              className={active === key ? styles.navActive :""}
+              className={active === key ? styles.navActive : ""}
               key={key}
             >
-              <a href={`#${key}`}>{key}</a>
+              <a href={`/${key}`}>{key}</a>
             </li>
           );
         })}
