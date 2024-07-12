@@ -34,16 +34,10 @@
         display: none;
     }
 
-    .controller:hover {
-        cursor: pointer;
-    }
-
     .controller {
         display: flex;
-        justify-content: space-between;
         padding: 0 30px;
     }
-
 
     .mobileMenu {
         display: flex;
