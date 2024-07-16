@@ -1,0 +1,85 @@
+.socialMediaSection {
+    margin-top: 50px;
+    text-align: center;
+    background-color: #f8ecd1; 
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+.socialMediaSection h2 {
+    font-size: 2rem;
+    color: #333; 
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+  
+.socialMediaPosts {
+    display: grid;
+    grid-template-rows: auto auto; 
+    gap: 20px;
+}
+  
+.instagramRow,
+.facebookRow {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+  
+.post {
+    background: wheat;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    width: 100%; 
+    max-width: 540px;
+    box-sizing: border-box;
+    overflow: hidden; 
+}
+  
+.post:hover {
+    transform: translateY(-5px);
+}
+  
+.instagram .instagram-media {
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    box-shadow: none;
+    margin: 0 auto;
+    max-width: 540px;
+    min-width: 300px;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden; 
+}
+
+.instagram {
+    display: flex;
+    justify-content: center;
+}
+  
+.facebook .fb-post {
+    width: 100% !important;
+    max-width: 540px; 
+    overflow: hidden;
+}
+  
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .instagramRow,
+    .facebookRow {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    .post {
+        width: 100%;
+        max-width: none;
+        margin-bottom: 20px;
+    }
+}
